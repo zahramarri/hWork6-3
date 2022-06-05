@@ -4,4 +4,5 @@
     <string name="textViewDate">May 9, 2021</string>
     <string name="buttonRentText">rent from $4.99</string>
     <string name="buttonBuyText">buy from $9.99</string>
+    <string name="textViewRatingText">7.2</string>
 </resources>

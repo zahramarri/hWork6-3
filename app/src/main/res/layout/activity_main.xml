@@ -94,8 +94,8 @@
     <Button
         android:id="@+id/buttonRent"
         android:layout_width="0dp"
-        android:layout_margin="15dp"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:backgroundTint="@color/purple_200"
         android:text="@string/buttonRentText"
         app:layout_constraintEnd_toStartOf="@+id/buttonBuy"
@@ -107,25 +107,76 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="15dp"
-        android:text="@string/buttonBuyText"
         android:layout_marginEnd="15dp"
         android:backgroundTint="@color/purple_200"
-        app:layout_constraintTop_toBottomOf="@id/textViewDate"
+        android:text="@string/buttonBuyText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/buttonRent"/>
+        app:layout_constraintStart_toEndOf="@id/buttonRent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDate" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginTop="25dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBuy"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        android:layout_marginTop="25dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBuy" />
 
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="30dp"
+        android:text="@string/textViewRatingText"
+        android:background="@drawable/circular_text_view"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
 
+    <ImageView
+        android:id="@+id/textViewFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circular_text_view"
+        android:backgroundTint="@color/teal_700"
+        android:src="@drawable/ic_action_name"
+        app:layout_constraintEnd_toStartOf="@id/textViewPercentage"
+        app:layout_constraintStart_toEndOf="@id/textViewRating"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ImageView
+        android:id="@+id/textViewPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circular_text_view"
+        android:backgroundTint="@color/teal_700"
+        android:src="@mipmap/tomato"
+        app:layout_constraintEnd_toStartOf="@id/textViewSimilar"
+        app:layout_constraintStart_toEndOf="@id/textViewFamily"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <ImageView
+        android:id="@+id/textViewSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="center"
+        android:background="@drawable/circular_text_view"
+        android:backgroundTint="@color/teal_700"
+        android:src="@drawable/ic_baseline_content_copy_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
