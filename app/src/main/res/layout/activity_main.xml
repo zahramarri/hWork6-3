@@ -67,5 +67,29 @@
         app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontal3" />
 
+    <TextView
+        android:id="@+id/textViewMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/textViewMovieName"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal3" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/textViewDate"
+        android:textColor="#4F5152"
+        app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
+        app:layout_constraintTop_toBottomOf="@id/textViewMovieName" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

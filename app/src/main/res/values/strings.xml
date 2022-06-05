@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">hWork6-3</string>
+    <string name="app_name">hWork6–3</string>
+    <string name="textViewMovieName">Vincenzo (2021)</string>
+    <string name="textViewDate">May 9, 2021</string>
 </resources>
