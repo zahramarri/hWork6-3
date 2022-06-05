@@ -5,4 +5,8 @@
     <string name="buttonRentText">rent from $4.99</string>
     <string name="buttonBuyText">buy from $9.99</string>
     <string name="textViewRatingText">7.2</string>
+    <string name="textViewRating2Text">242 ratings</string>
+    <string name="textViewGenreText">Family</string>
+    <string name="textViewPercentageText">71%</string>
+    <string name="textViewSimilarText">Similar</string>
 </resources>
