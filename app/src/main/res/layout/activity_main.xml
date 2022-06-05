@@ -78,7 +78,7 @@
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal3" />
+        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
 
     <TextView
         android:id="@+id/textViewDate"
