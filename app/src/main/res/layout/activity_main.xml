@@ -91,5 +91,28 @@
         app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
         app:layout_constraintTop_toBottomOf="@id/textViewMovieName" />
 
+    <Button
+        android:id="@+id/buttonRent"
+        android:layout_width="0dp"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/buttonRentText"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBuy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+
+    <Button
+        android:id="@+id/buttonBuy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:text="@string/buttonBuyText"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@id/textViewDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonRent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
