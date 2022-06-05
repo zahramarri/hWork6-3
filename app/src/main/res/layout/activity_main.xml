@@ -10,223 +10,226 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp"
-        app:layout_constraintGuide_percent="0.4" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="365dp"
+            app:layout_constraintGuide_percent="0.4" />
 
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        <ImageView
+            android:id="@+id/imageViewMoviePosterHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageViewMoviePosterHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageViewMoviePosterVertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal3"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVertical2"
+            app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
+            app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
 
-    <ImageView
-        android:id="@+id/imageViewMoviePosterVertical"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal3"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVertical2"
-        app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
+        <TextView
+            android:id="@+id/textViewMovieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/textViewMovieName"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
+            app:layout_constraintTop_toTopOf="@id/guidelineHorizontal2" />
 
-    <TextView
-        android:id="@+id/textViewMovieName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/textViewMovieName"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
-        app:layout_constraintTop_toTopOf="@id/guidelineHorizontal2" />
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/textViewDate"
+            android:textColor="#4F5152"
+            app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
+            app:layout_constraintTop_toBottomOf="@id/textViewMovieName" />
 
-    <TextView
-        android:id="@+id/textViewDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/textViewDate"
-        android:textColor="#4F5152"
-        app:layout_constraintStart_toEndOf="@id/imageViewMoviePosterVertical"
-        app:layout_constraintTop_toBottomOf="@id/textViewMovieName" />
+        <Button
+            android:id="@+id/buttonRent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/buttonRentText"
+            app:layout_constraintEnd_toStartOf="@+id/buttonBuy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDate" />
 
-    <Button
-        android:id="@+id/buttonRent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/buttonRentText"
-        app:layout_constraintEnd_toStartOf="@+id/buttonBuy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+        <Button
+            android:id="@+id/buttonBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/purple_200"
+            android:text="@string/buttonBuyText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonRent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDate" />
 
-    <Button
-        android:id="@+id/buttonBuy"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
-        android:layout_marginEnd="15dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="@string/buttonBuyText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/buttonRent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="25dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="@+id/buttonBuy"
+            app:layout_constraintStart_toStartOf="@+id/buttonRent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonBuy" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="25dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="@+id/buttonBuy"
-        app:layout_constraintStart_toStartOf="@+id/buttonRent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBuy" />
+        <TextView
+            android:id="@+id/textViewRating1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_text_view"
+            android:backgroundTint="@color/teal_700"
+            android:gravity="center"
+            android:text="@string/textViewRatingText"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
 
-    <TextView
-        android:id="@+id/textViewRating1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/circular_text_view"
-        android:backgroundTint="@color/teal_700"
-        android:gravity="center"
-        android:text="@string/textViewRatingText"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider" />
+        <ImageView
+            android:id="@+id/imageViewGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_text_view"
+            android:backgroundTint="@color/teal_700"
+            android:src="@drawable/ic_action_name"
+            app:layout_constraintEnd_toStartOf="@id/imageViewPercentage"
+            app:layout_constraintStart_toEndOf="@id/textViewRating1"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
 
-    <ImageView
-        android:id="@+id/imageViewGenre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/circular_text_view"
-        android:backgroundTint="@color/teal_700"
-        android:src="@drawable/ic_action_name"
-        app:layout_constraintEnd_toStartOf="@id/imageViewPercentage"
-        app:layout_constraintStart_toEndOf="@id/textViewRating1"
-        app:layout_constraintTop_toBottomOf="@id/divider" />
+        <ImageView
+            android:id="@+id/imageViewPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circular_text_view"
+            android:backgroundTint="@color/teal_700"
+            android:src="@mipmap/tomato"
+            app:layout_constraintEnd_toStartOf="@id/imageViewSimilar"
+            app:layout_constraintStart_toEndOf="@id/imageViewGenre"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
 
-    <ImageView
-        android:id="@+id/imageViewPercentage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/circular_text_view"
-        android:backgroundTint="@color/teal_700"
-        android:src="@mipmap/tomato"
-        app:layout_constraintEnd_toStartOf="@id/imageViewSimilar"
-        app:layout_constraintStart_toEndOf="@id/imageViewGenre"
-        app:layout_constraintTop_toBottomOf="@id/divider" />
+        <ImageView
+            android:id="@+id/imageViewSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/circular_text_view"
+            android:backgroundTint="@color/teal_700"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_content_copy_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
 
-    <ImageView
-        android:id="@+id/imageViewSimilar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/circular_text_view"
-        android:backgroundTint="@color/teal_700"
-        android:scaleType="center"
-        android:src="@drawable/ic_baseline_content_copy_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider" />
+        <TextView
+            android:id="@+id/textViewRating2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/textViewRating2Text"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/textViewRating1"
+            app:layout_constraintStart_toStartOf="@+id/textViewRating1"
+            app:layout_constraintTop_toBottomOf="@id/textViewRating1"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textViewRating2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/textViewRating2Text"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/textViewRating1"
-        app:layout_constraintStart_toStartOf="@+id/textViewRating1"
-        app:layout_constraintTop_toBottomOf="@id/textViewRating1"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textViewGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/textViewGenreText"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGenre"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGenre"
+            app:layout_constraintTop_toBottomOf="@id/imageViewGenre" />
 
-    <TextView
-        android:id="@+id/textViewGenre"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/textViewGenreText"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewGenre"
-        app:layout_constraintStart_toStartOf="@+id/imageViewGenre"
-        app:layout_constraintTop_toBottomOf="@id/imageViewGenre" />
+        <TextView
+            android:id="@+id/textViewPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/textViewPercentageText"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPercentage"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPercentage"
+            app:layout_constraintTop_toBottomOf="@id/imageViewPercentage" />
 
-    <TextView
-        android:id="@+id/textViewPercentage"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/textViewPercentageText"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewPercentage"
-        app:layout_constraintStart_toStartOf="@+id/imageViewPercentage"
-        app:layout_constraintTop_toBottomOf="@id/imageViewPercentage" />
+        <TextView
+            android:id="@+id/textViewSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/textViewSimilarText"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewSimilar"
+            app:layout_constraintStart_toStartOf="@+id/imageViewSimilar"
+            app:layout_constraintTop_toBottomOf="@id/imageViewSimilar" />
 
-    <TextView
-        android:id="@+id/textViewSimilar"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/textViewSimilarText"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewSimilar"
-        app:layout_constraintStart_toStartOf="@+id/imageViewSimilar"
-        app:layout_constraintTop_toBottomOf="@id/imageViewSimilar" />
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="360dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="30dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="@+id/buttonBuy"
-        app:layout_constraintStart_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@id/textViewRating2" />
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="360dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="30dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="@+id/buttonBuy"
+            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@id/textViewRating2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
