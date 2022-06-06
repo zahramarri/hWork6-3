@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:circularflow_angles="0dp"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,19 +39,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
+            app:layout_constraintGuide_percent="0.04" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineVertical2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.25" />
+            app:layout_constraintGuide_percent="0.29" />
 
         <ImageView
             android:id="@+id/imageViewMoviePosterHorizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/poster_horizontal"
             app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +66,9 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal3"
             app:layout_constraintEnd_toEndOf="@id/guidelineVertical2"
+            android:src="@mipmap/poster_vertical"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
             app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1" />
 
@@ -227,17 +234,18 @@
             android:layout_height="2dp"
             android:layout_marginTop="30dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintEnd_toEndOf="@+id/buttonBuy"
-            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="@id/buttonBuy"
+            app:layout_constraintStart_toStartOf="@id/buttonRent"
             app:layout_constraintTop_toBottomOf="@id/textViewRating2" />
 
         <TextView
             android:id="@+id/textViewMovieIntroduction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="25dp"
             android:text="@string/textViewMovieIntroductionText"
             android:textColor="@color/black"
-            android:layout_marginTop="25dp"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
